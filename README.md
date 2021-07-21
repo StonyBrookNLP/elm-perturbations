@@ -3,9 +3,9 @@
 Code for the ACL 2021 paper "Don't Let Discourse Confine Your Model: Sequence Perturbations for Improved Event Language Models"
 
 The code consists of two parts:
-The first part is the implementation of the sequence perturbations for autoregressive models, gpt-2 in our case. The gpt-2 implementaion is based on Huggingface library and the run_language_modeling.py script. 
+The first part is the implementation of the sequence perturbations for autoregressive models, gpt-2 in our case. The gpt-2 implementaion is based on Huggingface library. 
 
-The second part is the implementation of the HAQAE model. We have used the implementation in (HAQAE paper) and added the modifications required for perturbations. You can find the modified scripts here but please refer to (Noah's work) for the complete implementation of HAQAE.
+The second part is the implementation of the HAQAE model. We have used the implementation in https://arxiv.org/pdf/1808.09542.pdf and added the modifications required for perturbations. You can find the modified scripts here but please refer to github.com/StonyBrookNLP/HAQAE for the complete implementation of HAQAE.
 
 To run the gpt-2 model, you can use a script similar to:
 python train.py --train_dataset="train.txt" --eval_dataset="dev.txt" --output_dir="baseline" --num_train_epochs=1 
@@ -21,7 +21,7 @@ python train.py --train_data='train.txt' --valid_data='val.txt' --vocab='vocab.p
 
 To enable perturbations for the input sequences, you need to set the corresponding variables in data_utils.py.
 
-For detaile regarding different parameters of the HAQAE model, please refer to (Noah's work)
+For detaile regarding different parameters of the HAQAE model, please refer to github.com/StonyBrookNLP/HAQAE.
 
 
 
